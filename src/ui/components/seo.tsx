@@ -7,6 +7,7 @@ interface Props{
 }
 
 //title devient obligatoire dans n'importe quel page qui appelle le component Seo
+
 export const Seo = ({title, description}: Props) => {
     return (
         <>
