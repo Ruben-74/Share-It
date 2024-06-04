@@ -19,7 +19,7 @@ export const Navigation = ({}: Props) => {
                 ShareIT
               </div>
               <Typography variant="caption4" component="span" theme="gray">
-                Trouve de l'inspiration & reçois des feedbacks !
+                Trouve de l&apos; inspiration & reçois des feedbacks !
               </Typography>
             </div>
           </div>

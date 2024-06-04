@@ -35,8 +35,10 @@ export const Footer = () => {
             <div className="relative flex flex-col items-center justify-center pt-3">
                 <Image
                     src="/assets/svg/shareFooter.svg"
-                    width={229}
-                    height={216}
+                    width={0}
+                    height={0}
+                    priority
+                    className="w-auto h-auto"
                     alt="Share IT !"
                 />
                 <div className="absolute flex items-center justify-center">
