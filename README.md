@@ -53,3 +53,9 @@ export default config;
 ## INTEGRATION IMAGES AVEC NEXT JS
 
 next/images
+
+## librairie qui permet de generer des id uniques 
+
+- npm i uuidv4
+
+- npm install --save-dev @types/uuid : enregistre les typages des id generé

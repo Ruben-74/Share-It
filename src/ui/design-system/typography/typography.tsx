@@ -73,7 +73,7 @@ export const Typography = ({
       variantStyles = "text-caption2";
       break;
     case "caption3":
-      variantStyles = "text-caption4";
+      variantStyles = "text-caption3";
       break;
     case "caption4":
       variantStyles = "text-caption4";

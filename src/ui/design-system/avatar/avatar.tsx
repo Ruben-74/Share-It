@@ -13,13 +13,13 @@ export const Avatar = ({ size = "medium", src, alt}: Props) => {
   switch (size) {
     case "small":
       sizeStyles = "w-[24px] h-[24px] ";
-      break;
+    break;
     case "medium": //Default
       sizeStyles = "w-[34px] h-[34px]";
-      break;
+    break;
     case "large":
       sizeStyles = "w-[50px] h-[50px]";
-      break;
+    break;
   }
   return (
     //pour eviter que l'image prenne la taille de l'element parent (absolute) body on doit l'affecter la position = relative 
