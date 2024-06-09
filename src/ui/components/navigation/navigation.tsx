@@ -15,8 +15,8 @@ export const Navigation = ({}: Props) => {
           <div className="flex items-center gap-2.5">
             <Logo size="small" />
             <div className="flex flex-col">
-              <div className="text-gray font-extrabold text-[24px]">
-                ShareIT
+              <div className="font-mono tracking-tighter text-gray font-extrabold text-[24px]">
+                <span>[</span>Share <span className="text-primary">It ...]</span>
               </div>
               <Typography variant="caption4" component="span" theme="gray">
                 Trouve de l&apos; inspiration & reçois des feedbacks !

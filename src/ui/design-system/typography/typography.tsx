@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 interface Props {
   variant?:
-    | "display"
+    "display"
     | "h1"
     | "h2"
     | "h3"
@@ -103,8 +103,7 @@ export const Typography = ({
         variantStyles,
         colorStyles,
         weight === "medium" && "font-medium",
-        className,
-        "text-8xl"
+        className
       )}
     >
       {children}

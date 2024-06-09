@@ -20,7 +20,10 @@ export default function Home() {
     <>
       <Seo title="Share IT" description="Ruben create next app" />
 
-      <Layout>
+      {/* le paramètre isDisplayBreadCrumbs passé en Props dans layout.tsx permet d'effacer le fil d'ariane lorsqu'on se trouve
+      dans le layout avec une valeur boolean qui est par defaut a true */}
+      <Layout isDisplayBreadCrumbs = {false}>
+        {/* ici LandingPageContainer est un children de Layout et a l'autorisation du composant parent d'afficher ces elements */}
         <LandingPageContainer/>
       </Layout>
     </>

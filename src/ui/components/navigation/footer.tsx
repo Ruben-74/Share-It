@@ -38,7 +38,7 @@ export const Footer = () => {
                     width={0}
                     height={0}
                     priority
-                    className="w-auto h-auto"
+                    className="w-[229px] h-[216px]"
                     alt="Share IT !"
                 />
                 <div className="absolute flex items-center justify-center">
