@@ -1,7 +1,6 @@
 import { Typography } from "@/ui/design-system/typography/typography";
 import { Container } from "../container/container";
 import Image from "next/image";
-import { Logo } from "@/ui/design-system/logo/logo";
 import { footerLinks } from "./app-links";
 import {v4 as uuidv4 } from 'uuid';
 import { ActiveLink } from "./active-link";
@@ -33,18 +32,17 @@ export const Footer = () => {
                 Partagez votre talent et créativité !
             </Typography>
             <div className="relative flex flex-col items-center justify-center pt-3">
-                <Image
-                    src="/assets/svg/shareFooter.svg"
-                    width={0}
-                    height={0}
-                    priority
-                    className="w-[229px] h-[216px]"
-                    alt="Share IT !"
-                />
-                <div className="absolute flex items-center justify-center">
-                    <Logo size="large"/>
+                <div className="relative flex-col flex items-center justify-center">
+                    <Image
+                        src="/assets/svg/shareFooter.svg"
+                        width={0}
+                        height={0}
+                        priority
+                        className="flex items-center justify-center w-[220px]"
+                        alt="Share IT !"
+                    />
                 </div>
-
+                
             </div>
             
             </div>

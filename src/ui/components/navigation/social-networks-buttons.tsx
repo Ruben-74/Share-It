@@ -20,8 +20,8 @@ export const SocialNetworksButtons = ({className, theme="accent"} :Props) =>{
             //socialNetwork.icon peut etre indifined on transmet une valeur par defaut si on a pas l'info
             //si socialNetwork.icon est transmise on lui envoi une icon du tableau sinon on l'affectue une icon par defaut comme ça icon est tjr alimenté et supprime l'erreur d'undifined pas supporté par IconType
             icon={{icon: socialNetwork.icon ? socialNetwork.icon : RiFacebookBoxFill }}
-            baseUrl={socialNetwork.baseUrl}
-            linkType={socialNetwork.type}
+            // baseUrl={socialNetwork.baseUrl}
+            // linkType={socialNetwork.type}
         />
     ))
     return (

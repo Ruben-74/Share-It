@@ -37,6 +37,11 @@ const config: Config = {
         700: "#808080",
         800: "#333333",
         DEFAULT: "#1D1D1D",
+      },
+      alert: {
+        danger: "#FF4E4E",
+        success: "#90dA1",
+        warning: "#FEB72F",
       }
     },
     
@@ -69,6 +74,12 @@ const config: Config = {
         '4xl': ['36px', {
           lineHeight: '44px',
           letterSpacing: '-1.2px',
+          fontWeight: '500',
+        }],
+
+        '3xl': ['28px', {
+          lineHeight: '34px',
+          letterSpacing: '-0.8px',
           fontWeight: '500',
         }],
 

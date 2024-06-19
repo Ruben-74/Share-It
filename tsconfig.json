@@ -16,6 +16,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/ui/modules/landing-page/component/current-course"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/ui/modules/landing-page/landing-page/current-course"],
   "exclude": ["node_modules"]
 }

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 interface Props {
   size?: "small" | "medium" | "large";
-  variant?: "accent" | "secondary" | "outline" | "disabled" | "icon" | "success";
+  variant?: "accent" | "secondary" | "outline" | "disabled" | "icon" | "success" | "danger";
   icon?: IconProps;
   iconTheme?: "accent" | "secondary" | "gray";
   iconPosition?: "left" | "right";
@@ -16,6 +16,8 @@ interface Props {
   baseUrl?: string;
   linkType?: LinkType;
   action?: Function;
+  type?:"button" | "submit";
+  fullWith?: boolean;
 }
 
 //les valeurs par défaut sont défini ici...
@@ -30,7 +32,10 @@ export const Button = ({
   children,
   baseUrl,
   linkType = "internal",
+  type = "button",
+  fullWith = false,
   action = () => {},
+
 }: Props) => {
   let variantStyles: string = "",
     sizeStyles: string = "",
@@ -56,6 +61,10 @@ export const Button = ({
       case "success":
         variantStyles =
           "bg-secondary hover:bg-secondary-400 text-white rounded";
+      break;
+      case "danger":
+        variantStyles =
+          "bg-alert-danger hover:bg-alert-danger/75 text-white rounded";
       break;
       
     case "icon": //Default
@@ -100,13 +109,15 @@ export const Button = ({
       break;
   }
 
+  
   const buttonContent = (
     <>
         {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center">
             {
                 //Si variant = accent ou variant = icon
-                variant === "accent" || variant === "icon" ? (
+                variant === "accent" || 
+                variant === "icon" ? (
                 <Spinner size="small" variant="white" />
                 ) : (
                 //sinon
@@ -141,23 +152,24 @@ export const Button = ({
         }
   }
 
+  {/* type on l'a donné par defaut la valeur de button mais si on appelle le composant <Button type="submit"/>*/}
   const buttonElement = (
-    <>
+
         <button
-        type="button"
+        type={type}
         className={clsx(
                 variantStyles,
                 iconSize,
                 sizeStyles,
-                isLoading && "cursor-wait",
+                isLoading && "cursor-not-allowed",
+                fullWith && "w-full",
                 "relative animate"
         )}
-        onClick={() => handleClick} disabled={disabled}
-        >
+        //evite de declencher le formulaire une fois en etat isLoading lorsqu'on click sur le button
+        onClick={handleClick} disabled={disabled || isLoading ? true : false}>
             {buttonContent}
         
         </button>
-    </>
   );
 
   if (baseUrl) {

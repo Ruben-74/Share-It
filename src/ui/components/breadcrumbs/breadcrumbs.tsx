@@ -1,6 +1,6 @@
 import { Typography } from "@/ui/design-system/typography/typography";
 import clsx from "clsx";
-import { useRouter } from "next/router"
+import { useRouter } from "next/router" //Hook
 import { RiHome3Fill } from "react-icons/ri";
 import {v4 as uuidv4 } from 'uuid';
 import { Container } from "../container/container";
@@ -16,7 +16,7 @@ export const BreadCrumbs = () =>{
 
     const view = segments.map((path, index)=>(
         <div key={uuidv4()}>
-            {/* la methode slice permet de prtendre une partie d'un tableau et de la copier slice(1) permet d'ignorer le premier element et vu
+            {/* la methode slice permet de prendre une partie d'un tableau et de la copier slice(1) permet d'ignorer le premier element et vu
             qu'un tableau commence a 0 pour obtenir la prochaine valeur on lui ajoute (index + 1) et on lui joint un slash a la volé*/}
             <Link href={index > 0 ? `/${segments.slice(1, index + 1 ).join("/")}` :   `/`}>
             {/* ne pas oublier de mettre un slash en debut pour creer un chemin relatif et eviter d'afficher 2x le meme chemin */}

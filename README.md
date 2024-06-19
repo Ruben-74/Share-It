@@ -59,3 +59,11 @@ next/images
 - npm i uuidv4
 
 - npm install --save-dev @types/uuid : enregistre les typages des id generé
+
+## React hook form
+
+- npm install react-hook-form
+
+## librairie de notification 
+
+npm install --save react-toastify
